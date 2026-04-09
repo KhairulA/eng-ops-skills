@@ -1,0 +1,39 @@
+{
+  "manifest_version": "1",
+  "name": "Outline Wiki Skill",
+  "description": "Integrate Outline Wiki with Claude agents. Search, create, and manage documents in your knowledge base.",
+  "version": "1.0.0",
+  "author": "KhairulA",
+  "repository": "https://github.com/KhairulA/outline-wiki-skill",
+  "license": "MIT",
+  "skills": [
+    {
+      "id": "outline-wiki",
+      "name": "Outline Wiki",
+      "description": "Search, create, and manage documents in Outline Wiki. Works with Claude Code, claude.ai, Claude API, Paperclip AI, Cursor, and Windsurf.",
+      "path": "skills/outline-wiki",
+      "platforms": [
+        "claude-code",
+        "cursor",
+        "windsurf",
+        "codex",
+        "paperclip"
+      ],
+      "categories": [
+        "knowledge-management",
+        "documentation",
+        "wiki",
+        "collaboration"
+      ],
+      "tags": [
+        "outline",
+        "wiki",
+        "knowledge-base",
+        "documentation",
+        "api",
+        "search",
+        "content-management"
+      ]
+    }
+  ]
+}
