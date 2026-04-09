@@ -8,7 +8,8 @@ Our skills are organized into three primary verticals supported by a high-trust 
 
 | | **KnowledgeOps** | **ExecutionOps** | **QualityOps** |
 | :--- | :--- | :--- | :--- |
-| **Pillar Tools** | Outline, Confluence | Jira, Linear | GitHub Audit, Snyk |
+| **Pillar Tools** | Outline, Confluence | Jira, GitLab Issues | GitHub, GitLab MRs |
+
 | **Goal** | Single Source of Truth | Task & Velocity | Trust & Compliance |
 
 ## Current Skills
@@ -18,7 +19,8 @@ Our skills are organized into three primary verticals supported by a high-trust 
 | [**Outline Ops**](./skills/outline-ops) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
 | [**Jira EngOps**](./skills/jira-ops) | ExecutionOps | 🧪 Beta | Task hygiene, status auditing, and project alignment. |
 | [**GitHub EngOps**](./skills/github-ops) | QualityOps | 🧪 Beta | PR auditing, repo hygiene, and code governance. |
-| [**GitLab EngOps**](./skills/gitlab-ops) | QualityOps | 🧪 Beta | MR auditing, project hygiene, and CI/CD monitoring. |
+| [**GitLab EngOps**](./skills/gitlab-ops) | QualityOps | 🧪 Beta | MR auditing, issues management, and CI/CD monitoring. |
+
 
 
 

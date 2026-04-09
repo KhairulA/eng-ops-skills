@@ -38,9 +38,23 @@ Find open MRs that need attention or have been stale.
 Check if an MR meets the configured approval rules (e.g. at least 1 approval).
 
 #### `mrs.comment`
-Post a comment on a Merge Request. Use this to link Jira tickets or documentation.
+Post a comment on a Merge Request. Use this to link task keys or documentation.
+
+### Issues (ExecutionOps)
+
+#### `issues.search`
+Find issues within a project or group. Useful for status auditing.
+- **Project PID**: Required.
+- **Labels**: Optional filter (e.g. `eng-ops:done`).
+
+#### `issues.update`
+Change the status, labels, or milestone of an issue.
+
+#### `issues.comment`
+Add internal notes or status updates to an issue.
 
 ### Project Hygiene
+
 
 #### `project.audit_files`
 Checks for standard files like `README.md` and `LICENSE` in the repository root.
