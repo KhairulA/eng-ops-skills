@@ -66,14 +66,15 @@ The `core/` directory contains shared modules used across all skills to ensure c
 - **[Governance](./core/governance)**: Human-in-the-loop (HITL) and approval gate patterns.
 - **[Authentication](./core/auth)**: Enterprise-grade credential management patterns.
 
-## Roadmap
+## Coming Soon (Roadmap)
 
-- [x] **Q1 2026**: Knowledge Vertical (Outline)
-- [x] **Q2 2026**: Execution Vertical (Jira) & Alignment Bridge
-- [x] **Q2 2026**: Quality & Security Vertical (GitHub PR Audit)
-- [x] **Q2 2026**: Horizontal Governance Layer (HITL Patterns)
-- [x] **Q2 2026**: Full EngOps Triad Automation (v1.0 Release)
-- [x] **Q2 2026**: Policy-as-Code Integration
+We are actively expanding the EngOps Matrix into new domains:
+
+- [ ] **Communications Vertical**: Slack & Microsoft Teams integration for automated status reporting.
+- [ ] **Incident Vertical**: PagerDuty & Opsgenie skills for SRE "Incident Shadowing" and post-mortem drafting.
+- [ ] **FinOps Vertical**: AWS/GCP Cost Explorer integration for cloud spend auditing.
+- [ ] **Advanced Policy Engine**: Executable Policy-as-Code for real-time agent validation.
+
 
 
 ## Contributing
