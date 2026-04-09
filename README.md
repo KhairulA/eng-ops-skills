@@ -17,6 +17,9 @@ Our skills are organized into three primary verticals supported by a high-trust 
 | Skill | Category | Status | Description |
 | :--- | :--- | :--- | :--- |
 | [**Outline Ops**](./skills/outline-ops) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
+| [**Confluence Ops**](./skills/confluence-ops) | KnowledgeOps | 🏗️ Planned | Enterprise documentation management in Atlassian Confluence. |
+| [**Notion Ops**](#) | KnowledgeOps | 🏗️ Planned | Documentation and project management in Notion. |
+
 | [**Jira EngOps**](./skills/jira-ops) | ExecutionOps | 🧪 Beta | Task hygiene, status auditing, and project alignment. |
 | [**GitHub EngOps**](./skills/github-ops) | QualityOps | 🧪 Beta | PR auditing, repo hygiene, and code governance. |
 | [**GitLab EngOps**](./skills/gitlab-ops) | QualityOps | 🧪 Beta | MR auditing, issues management, and CI/CD monitoring. |
@@ -76,10 +79,12 @@ The `core/` directory contains shared modules used across all skills to ensure c
 
 We are actively expanding the EngOps Matrix into new domains:
 
+- [ ] **KnowledgeOps Expansion**: Confluence & Notion verticals to support diverse documentation stacks.
 - [ ] **Communications Vertical**: Slack & Microsoft Teams integration for automated status reporting.
 - [ ] **Incident Vertical**: PagerDuty & Opsgenie skills for SRE "Incident Shadowing" and post-mortem drafting.
 - [ ] **FinOps Vertical**: AWS/GCP Cost Explorer integration for cloud spend auditing.
 - [ ] **Advanced Policy Engine**: Executable Policy-as-Code for real-time agent validation.
+
 
 
 

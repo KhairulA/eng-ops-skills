@@ -12,9 +12,16 @@
       "name": "Outline Ops",
       "description": "Knowledge management and documentation hygiene in Outline.",
       "path": "skills/outline-ops",
-
       "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
       "categories": ["knowledge-management", "documentation"]
+    },
+    {
+      "id": "confluence-ops",
+      "name": "Confluence Ops (Draft)",
+      "description": "Enterprise documentation management in Confluence.",
+      "path": "skills/confluence-ops",
+      "platforms": ["claude-code", "paperclip"],
+      "categories": ["knowledge-management", "atlassian"]
     },
     {
       "id": "jira-ops",
