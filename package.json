@@ -1,0 +1,25 @@
+{
+  "name": "eng-ops-skills",
+  "version": "1.0.0",
+  "description": "Enterprise-grade AI agent skills for Engineering Operations.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhairulA/eng-ops-skills.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "engops",
+    "outline",
+    "jira",
+    "github",
+    "skills"
+  ],
+  "author": "KhairulA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KhairulA/eng-ops-skills/issues"
+  },
+  "homepage": "https://github.com/KhairulA/eng-ops-skills#readme"
+}

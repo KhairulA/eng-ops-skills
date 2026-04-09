@@ -1,0 +1,7 @@
+{
+  "name": "@eng-ops/jira-ops",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Jira hygiene and alignment integration for AI agents.",
+  "keywords": ["ai", "agent", "jira", "engops"],
+  "license": "MIT"
+}

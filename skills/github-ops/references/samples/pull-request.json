@@ -1,0 +1,13 @@
+{
+  "number": 88,
+  "state": "open",
+  "title": "feat: connect github-ops to core security",
+  "user": {
+    "login": "eng-dev"
+  },
+  "body": "This PR implements the Triad sync. Fixes [PROJ-45].",
+  "updated_at": "2026-04-09T11:00:00Z",
+  "requested_reviewers": [
+    { "login": "lead-architect" }
+  ]
+}

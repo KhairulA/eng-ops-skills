@@ -1,0 +1,15 @@
+{
+  "id": "abc-123",
+  "key": "PROJ-45",
+  "fields": {
+    "summary": "Fix PII leak in logging vertical",
+    "status": {
+      "name": "In Progress"
+    },
+    "priority": {
+      "name": "High"
+    },
+    "updated": "2026-04-09T10:00:00.000+0000",
+    "description": "We need to ensure all logs pass through the pii-guard core module."
+  }
+}

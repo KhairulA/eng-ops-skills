@@ -1,0 +1,11 @@
+{
+  "id": "doc-uuid-123",
+  "title": "EngOps Security Guidelines",
+  "text": "# Security Guidelines\n\nAll agents must follow the PII guard rules.",
+  "collectionId": "col-uuid-456",
+  "dataAttributes": {
+    "Status": "Published",
+    "Owner": "Security Team"
+  },
+  "updatedAt": "2026-04-09T09:30:00Z"
+}
