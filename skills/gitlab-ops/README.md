@@ -25,18 +25,21 @@ GITLAB_URL=https://gitlab.your-company.com
 GITLAB_TOKEN=your_token_here
 ```
 
-## Installation
+## Installation for Paperclip AI
 
-### As part of the EngOps Suite (Recommended)
+This skill is best installed as part of the **EngOps Suite** to maintain horizontal integration.
+
+### Method A: The Suite Submodule (Recommended)
+Add the entire suite and symlink this skill:
 
 ```bash
-npx skills add KhairulA/eng-ops-skills
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
+ln -s eng-ops/skills/gitlab-ops .agents/gitlab-ops
 ```
 
-### Standalone Installation
-
+### Method B: Single Skill Install
 ```bash
-npx skills add KhairulA/eng-ops-skills/skills/gitlab-ops
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/gitlab-ops
 ```
 
 ## Common Workflows

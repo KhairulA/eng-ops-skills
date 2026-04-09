@@ -1,5 +1,10 @@
 ---
-description: When the user wants to search, create, manage, or migrate documents in an Outline wiki. Use when they mention Outline, need to access wiki content, create documentation, organize knowledge bases, or integrate Outline with other tools.
+name: outline-ops
+description: Deep integration with Outline docs, collections, and data attributes. Use when the user needs to search, create, manage, or organize knowledge in an Outline wiki.
+metadata:
+  author: KhairulA
+  version: 1.0.0
+license: MIT
 related: [custom-context, search-optimization, content-migration]
 ---
 
@@ -300,26 +305,12 @@ See detailed documentation:
 
 ## Installation
 
-### Option 1: CLI Install (Single Skill Only)
+This skill is part of the **EngOps Suite**. To install it in your Paperclip project:
 
-```bash
-# Install this specific skill
-npx skills add KhairulA/eng-ops-skills/skills/outline-ops
-```
+1.  **Add Submodule**: `git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops`
+2.  **Symlink Skill**: `ln -s eng-ops/skills/outline-ops .agents/outline-ops`
 
-### Option 2: Full Suite (Recommended)
-
-```bash
-# Install the full EngOps suite
-npx skills add KhairulA/eng-ops-skills
-```
-
-### Option 3: Manual Clone / Submodule
-
-```bash
-git clone https://github.com/KhairulA/eng-ops-skills.git
-cp -r eng-ops-skills/skills/outline-ops .agents/skills/
-```
+For full suite installation and configuration (environment variables, etc.), see the root **[README.md](../../README.md)** and **[AGENTS.md](../../AGENTS.md)**.
 
 
 ---

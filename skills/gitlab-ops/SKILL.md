@@ -1,5 +1,10 @@
 ---
-description: When the user wants to audit GitLab Merge Requests (MRs), manage issues, check project hygiene, or sync code activity with Jira and Outline. Use when GitLab, MRs, projects, or GitLab reviews are mentioned.
+name: gitlab-ops
+description: GitLab MR auditing, issue management, and repository hygiene. Use when the user needs to audit merge requests, check pipeline status, or sync code activity with tasks.
+metadata:
+  author: KhairulA
+  version: 1.0.0
+license: MIT
 related: [jira-ops, outline-ops]
 ---
 

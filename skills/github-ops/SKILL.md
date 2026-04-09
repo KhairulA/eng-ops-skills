@@ -1,5 +1,10 @@
 ---
-description: When the user wants to audit PRs, manage GitHub issues, check repository hygiene, or sync code activity with Jira and Outline. Use when GitHub, pull requests, repos, or PR reviews are mentioned.
+name: github-ops
+description: GitHub PR auditing, repository hygiene, and code governance. Use when the user needs to audit pull requests, check branch status, or sync code activity with tasks.
+metadata:
+  author: KhairulA
+  version: 1.0.0
+license: MIT
 related: [jira-ops, outline-ops]
 ---
 

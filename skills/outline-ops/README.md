@@ -6,19 +6,21 @@ Integrates Outline Ops with Claude (via Claude Code, claude.ai, or Claude API) a
 
 ## Quick Start
 
-### Option 1: CLI Install (Single Skill)
+## Installation for Paperclip AI
+
+This skill is best installed as part of the **EngOps Suite** to maintain horizontal integration.
+
+### Method A: The Suite Submodule (Recommended)
+Add the entire suite and symlink this skill:
 
 ```bash
-# Install only this specific skill from the EngOps suite
-npx skills add KhairulA/eng-ops-skills/skills/outline-ops
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
+ln -s eng-ops/skills/outline-ops .agents/outline-ops
 ```
 
-### Option 2: Full Suite (Recommended for EngOps)
-
-If you want the full suite including the shared PII filters and audit loggers:
-
+### Method B: Single Skill Install
 ```bash
-npx skills add KhairulA/eng-ops-skills
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/outline-ops
 ```
 
 
@@ -188,12 +190,12 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## Installation Methods Supported
 
-✅ npx skills (CLI)  
-✅ Claude Code plugin marketplace  
+## Installation Methods Supported
+
+✅ Git submodule (Recommended)
 ✅ Manual clone  
-✅ Git submodule  
+✅ Claude Code plugin pattern
 ✅ Fork and customize  
-✅ SkillKit (multi-agent install)
 
 ## Compatibility
 

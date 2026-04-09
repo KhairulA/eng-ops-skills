@@ -3,30 +3,26 @@
 EngOps agents are specialized Paperclip agents designed to reduce the "Management Tax" on engineering teams. They handle documentation, ticket hygiene, and compliance auditing.
 
 ## 1. Installation in Paperclip
+ 
+### Option 1: Remote Injection (Native)
+Paperclip supports loading skills directly from GitHub URLs. Use the raw `SKILL.md` links for production environments to avoid managing local files.
 
-Paperclip discovers skills by scanning the `.agents/` directory for folders containing a `SKILL.md`. To use the **EngOps Suite**, you must ensure the individual verticals are visible to the Paperclip scanner.
-
-### Method A: The Suite Submodule (Recommended)
-This method keeps you in sync with the entire EngOps project.
+### Option 2: Local Discovery (Development)
+Paperclip natively discovers skills by scanning configured directories. For this monorepo, we recommend pointing Paperclip directly to the `skills/` folder:
 
 ```bash
-# 1. Add the suite to your paperclip project
-git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
-
-# 2. Expose specific skills to the Paperclip scanner via symlinks
-ln -s eng-ops/skills/outline-ops .agents/outline-ops
-ln -s eng-ops/skills/jira-ops .agents/jira-ops
-
-ln -s eng-ops/skills/github-ops .agents/github-ops
-ln -s eng-ops/core/security .agents/pii-guard
+npx paperclipai run --skills ./path/to/eng-ops-skills/skills
 ```
 
-### Method B: Single Skill Install
-If you only want one vertical:
+### Option 3: Submodule Pattern (Managed)
+If you prefer to maintain the skills within your project's version control:
 
 ```bash
-git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/outline-ops
-# Then update the Paperclip skill config to point to: .agents/outline-ops/skills/outline-ops
+# 1. Add the suite as a submodule
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
+
+# 2. Symlink core horizontals (optional)
+ln -s eng-ops/core/security .agents/pii-guard
 ```
 
 ---

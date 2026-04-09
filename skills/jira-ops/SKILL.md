@@ -1,5 +1,10 @@
 ---
-description: When the user wants to manage Jira issues, search for task status, audit stale tickets, or sync engineering tasks with external documentation. Use when Jira, tickets, issues, sprints, or task status are mentioned.
+name: jira-ops
+description: Automated Jira issue management, status auditing, and project alignment. Use when the user needs to search, update, or sync engineering tasks.
+metadata:
+  author: KhairulA
+  version: 1.0.0
+license: MIT
 related: [outline-ops, sync-auditor]
 ---
 

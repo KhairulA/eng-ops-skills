@@ -17,6 +17,8 @@
     "jira",
     "github",
     "skills",
+    "agent-skills",
+    "skills.sh",
     "enterprise-ai",
     "automation-engine"
   ],

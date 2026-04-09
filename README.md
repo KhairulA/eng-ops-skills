@@ -55,20 +55,34 @@ If you are building an AI company or scaling internal productivity with **Paperc
 - **Compliance-First**: Inherit enterprise-grade PII masking and audit logging from day one.
 - **Scalable**: Start with a single skill and expand into the full "EngOps Triad" as your company grows.
 
-## Getting Started
+## Installation
 
-### Installation
-
-Choose the individual skills you need for your agent:
+### 1. Ecosystem Standard (Rapid Install)
+The recommended way to add these skills to your agent (Claude Code, Cursor, etc.) is using the **[skills.sh](https://skills.sh)** CLI:
 
 ```bash
-# Add a single skill
-npx skills add KhairulA/eng-ops-skills/skills/outline-ops
-
-
-# Add the full suite
+# Add the full EngOps suite
 npx skills add KhairulA/eng-ops-skills
+
+# Add a specific vertical (e.g. Outline KnowledgeOps)
+npx skills add KhairulA/eng-ops-skills/skills/outline-ops
 ```
+
+### 2. Native for Paperclip AI
+If you are building a company on **Paperclip AI**, you have two direct integration options:
+
+#### Option A: Remote Injection (Dashboard / Cloud)
+Paste the **Raw URL** of a `SKILL.md` into your agent's configuration:
+- **Outline Ops**: `https://raw.githubusercontent.com/KhairulA/eng-ops-skills/main/skills/outline-ops/SKILL.md`
+- **Jira EngOps**: `https://raw.githubusercontent.com/KhairulA/eng-ops-skills/main/skills/jira-ops/SKILL.md`
+
+#### Option B: Local Discovery (Development / CLI)
+Point your Paperclip instance to the `skills/` folder to natively discover all verticals:
+```bash
+npx paperclipai run --skills ./path/to/eng-ops-skills/skills
+```
+
+For advanced multi-skill orchestration, submodule patterns, and environment variable setup, see **[AGENTS.md](./AGENTS.md)**.
 
 ### For Developers
 
@@ -78,7 +92,7 @@ We provide **[Sample Payloads](./skills/outline-ops/references/samples)** for ea
 
 The `core/` directory contains shared modules used across all skills to ensure consistency:
 
-- **[Security](./core/security)**: PII masking and secret detection.
+- **[Security](./core/security)**: PII masking and secret detection (includes `SKILL.md` for native agent discovery).
 - **[Logging](./core/logging)**: Standardized JSON audit logging for agent actions.
 - **[Governance](./core/governance)**: Human-in-the-loop (HITL) and approval gate patterns.
 - **[Authentication](./core/auth)**: Enterprise-grade credential management patterns.

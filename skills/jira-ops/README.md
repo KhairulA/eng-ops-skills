@@ -26,18 +26,21 @@ JIRA_USER_EMAIL=your-email@company.com
 JIRA_API_TOKEN=your_token_here
 ```
 
-## Installation
+## Installation for Paperclip AI
 
-### As part of the EngOps Suite (Recommended)
+This skill is best installed as part of the **EngOps Suite** to maintain horizontal integration.
+
+### Method A: The Suite Submodule (Recommended)
+Add the entire suite and symlink this skill:
 
 ```bash
-npx skills add KhairulA/eng-ops-skills
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
+ln -s eng-ops/skills/jira-ops .agents/jira-ops
 ```
 
-### Standalone Installation
-
+### Method B: Single Skill Install
 ```bash
-npx skills add KhairulA/eng-ops-skills/skills/jira-ops
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/jira-ops
 ```
 
 ## Common Workflows

@@ -26,12 +26,16 @@ This script (which Claude can generate and run) checks if any 'Done' Jira ticket
 // alignment-audit.js
 const { execSync } = require('child_process');
 
+// Note: In Paperclip, agents usually handle this via natural language.
+// These are examples of how you might script interactions if using a local CLI.
+
 // 1. Get Done items from Jira
-const jiraDone = JSON.parse(execSync('npx skills run jira-ops issues.search "status = Done"'));
+// (Conceptual: replace with your actual CLI or agent call)
+const jiraDone = JSON.parse(execSync('paperclip-cli run jira-ops issues.search "status = Done"'));
 
 // 2. Cross-reference with Outline
 jiraDone.issues.forEach(issue => {
-  const wikiMatch = execSync(`npx skills run outline-ops documents.search "${issue.key}"`);
+  const wikiMatch = execSync(`paperclip-cli run outline-ops documents.search "${issue.key}"`);
   if (!wikiMatch.includes(issue.key)) {
     console.log(`⚠️ ALIGNMENT GAP: ${issue.key} is Done in Jira but missing from Outline.`);
   }
@@ -50,10 +54,11 @@ Add these to your `.clauderc` or local shell alias:
 
 ```bash
 # Rapid Hygiene Check
-alias eng-audit="npx skills run jira-ops hygiene.find_stale --days 7"
+# Note: These aliases assume a wrapper or direct agent execution path
+alias eng-audit="paperclip-cli run jira-ops hygiene.find_stale --days 7"
 
 # Rapid PR Review
-alias pr-audit="npx skills run github-ops prs.audit_reviews --repo platform"
+alias pr-audit="paperclip-cli run github-ops prs.audit_reviews --repo platform"
 ```
 
 ---
