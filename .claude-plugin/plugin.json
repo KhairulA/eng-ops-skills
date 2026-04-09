@@ -1,0 +1,47 @@
+{
+  "manifest_version": "2",
+  "name": "EngOps Suite",
+  "id": "eng-ops",
+  "description": "Enterprise-grade AI agent skills for Engineering Operations (EngOps). Includes Knowledge, Execution, and Quality verticals with built-in PII protection.",
+  "version": "1.0.0",
+  "author": "KhairulA",
+  "repository": "https://github.com/KhairulA/eng-ops-skills",
+  "license": "MIT",
+  "skills": [
+    {
+      "id": "outline-ops",
+      "name": "Outline Ops",
+      "description": "Deep integration with Outline documentation, collections, and data attributes.",
+      "path": "skills/outline-ops",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "jira-ops",
+      "name": "Jira EngOps",
+      "description": "Automated Jira issue management, status auditing, and project alignment.",
+      "path": "skills/jira-ops",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "github-ops",
+      "name": "GitHub EngOps",
+      "description": "GitHub PR auditing, repository hygiene, and code governance.",
+      "path": "skills/github-ops",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "gitlab-ops",
+      "name": "GitLab EngOps",
+      "description": "GitLab MR auditing, issues management, and CI/CD monitoring.",
+      "path": "skills/gitlab-ops",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "pii-guard",
+      "name": "PII Guard",
+      "description": "High-trust PII masking and secret detection core rules.",
+      "path": "core/security",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    }
+  ]
+}
