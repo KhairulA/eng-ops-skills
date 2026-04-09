@@ -61,7 +61,7 @@ Include credentials directly in function calls or Claude API requests.
 
 ## API Reference
 
-All endpoints require Bearer token authentication:
+All endpoints are `POST` requests and require Bearer token authentication:
 ```
 Authorization: Bearer YOUR_API_TOKEN
 Content-Type: application/json
@@ -70,150 +70,134 @@ Content-Type: application/json
 ### Documents
 
 #### `documents.search`
-Search documents by keyword or content.
+Search documents by keyword or content. Essential for discovery.
 
-**Parameters:**
-- `query` (string, required): Search terms
-- `limit` (integer, optional): Max results, default 15
-- `offset` (integer, optional): Pagination offset, default 0
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `query` | string | Yes | Search terms or keyword. |
+| `collectionId`| string | No | Filter by specific collection UUID. |
+| `statusFilter`| string | No | `draft`, `archived`, or `published`. |
+| `limit` | integer | No | Max results (default 15). |
+| `offset` | integer | No | Pagination offset (default 0). |
 
-**Returns:** Array of documents with matching content, ranked by relevance.
+**Returns**: Array of document summaries with relevance scores.
 
 #### `documents.list`
-List all documents, optionally filtered by collection.
+List all documents, optionally filtered.
 
-**Parameters:**
-- `collectionId` (string, optional): Filter by specific collection
-- `limit` (integer, optional): Max results, default 25
-- `offset` (integer, optional): Pagination offset
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `collectionId`| string | No | Filter by specific collection. |
+| `statusFilter`| string | No | `draft`, `archived`, or `published`. |
+| `limit` | integer | No | Max results (default 25). |
 
-**Returns:** Paginated list of documents with metadata.
+**Returns**: Paginated list of document objects (partial content).
 
 #### `documents.info`
-Retrieve a single document's full content.
+Retrieve a single document's full content (Markdown).
 
-**Parameters:**
-- `id` (string, required): Document ID
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | string | Yes | Document UUID or `urlId`. |
 
-**Returns:** Document object with full Markdown content, metadata, and collaborators.
+**Returns**: Full document object including `text` (Markdown).
 
 #### `documents.create`
-Create a new document in a collection.
+Create a new document.
 
-**Parameters:**
-- `collectionId` (string, required): Target collection ID
-- `title` (string, required): Document title
-- `text` (string, optional): Initial Markdown content
-- `parentDocumentId` (string, optional): Nest under another document
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | string | Yes | Document title. |
+| `text` | string | No | Initial Markdown content. |
+| `collectionId`| string | Yes | Target collection UUID. |
+| `parentDocumentId`| string | No | Nest under another document. |
+| `icon` | string | No | Emoji (🎉) or [Outline Icon](https://github.com/outline/outline-icons) name. |
 
-**Returns:** Created document object with generated ID.
+**Returns**: Successfully created document object.
 
 #### `documents.update`
 Update document content or metadata.
 
-**Parameters:**
-- `id` (string, required): Document ID
-- `title` (string, optional): New title
-- `text` (string, optional): New Markdown content
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | string | Yes | Document UUID. |
+| `title` | string | No | New title. |
+| `text` | string | No | New Markdown content. |
+| `editMode` | string | No | `append`, `prepend`, or `replace` (default). |
 
-**Returns:** Updated document object.
+**Returns**: Updated document object.
 
 #### `documents.delete`
-Delete a document (or archive it).
+Delete a document or move to trash.
 
-**Parameters:**
-- `id` (string, required): Document ID
-- `permanent` (boolean, optional): Permanent deletion, default false (archive)
-
-**Returns:** Success confirmation.
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | string | Yes | Document UUID. |
+| `permanent` | boolean | No | `true` for permanent, `false` to archive (default). |
 
 ### Collections
 
 #### `collections.list`
-List all collections in the workspace.
+List all accessible collections. **Use this first to navigate a new workspace.**
 
-**Parameters:**
-- `limit` (integer, optional): Max results, default 25
-- `offset` (integer, optional): Pagination offset
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `limit` | integer | No | Max results (default 25). |
 
-**Returns:** Array of collection objects with metadata.
+**Returns**: Array of collections with `id`, `name`, and `description`.
 
 #### `collections.info`
 Retrieve collection details.
 
-**Parameters:**
-- `id` (string, required): Collection ID
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | string | Yes | Collection UUID. |
 
-**Returns:** Collection object with description, icon, documents count, and membership.
+### Data Attributes (Structured Metadata)
 
-#### `collections.create`
-Create a new collection.
-
-**Parameters:**
-- `name` (string, required): Collection name
-- `description` (string, optional): Collection description
-- `icon` (string, optional): Emoji icon for collection
-
-**Returns:** Created collection object with ID.
-
-### Comments
-
-#### `comments.create`
-Add a comment to a document for collaboration and feedback.
-
-**Parameters:**
-- `documentId` (string, required): Target document ID
-- `data` (object, optional): ProseMirror JSON format (for rich formatting)
-- `text` (string, optional): Plain text comment (simpler alternative)
-
-**Returns:** Created comment object with ID and timestamp.
-
-### Data Attributes
+Required for advanced Paperclip AI tracking. See [data-attributes.md](./references/data-attributes.md) for details.
 
 #### `dataAttributes.list`
-List all custom data attributes in the workspace.
+List all custom attributes defined in the workspace.
 
-**Parameters:**
-- `limit` (integer, optional): Max results, default 50
-- `offset` (integer, optional): Pagination offset
-- `sort` (string, optional): Sort field (name, createdAt, etc.)
-- `direction` (string, optional): 'asc' or 'desc'
-
-**Returns:** Array of attribute objects.
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `limit` | integer | No | Default 50. |
 
 #### `dataAttributes.create`
-Define a new custom data attribute for structured metadata.
+Define a new metadata field.
 
-**Parameters:**
-- `name` (string, required): Attribute name
-- `dataType` (string, required): Data type (text, select, date, number, checkbox, etc.)
-- `description` (string, optional): Attribute description
-- `options` (array, optional): Predefined options for select types
-- `pinned` (boolean, optional): Pin for visibility, default false
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `name` | string | Yes | Attribute name (e.g. "Status"). |
+| `dataType` | string | Yes | `string`, `number`, `boolean`, or `list`. |
+| `options` | array | No | For `list` type: `[{ "label": "X", "value": "x" }]`. |
+| `pinned` | boolean | No | Show attribute prominently. |
 
-**Returns:** Created attribute object with ID.
+#### `collections.create`
+Create a new organization folder.
 
-#### `dataAttributes.update`
-Update a custom data attribute.
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `name` | string | Yes | Collection name. |
+| `description`| string | No | Markdown description. |
+| `icon` | string | No | Icon name or emoji. |
 
-**Parameters:**
-- `id` (string, required): Attribute ID
-- `name` (string, required): Updated name
-- `description` (string, optional): Updated description
-- `options` (array, optional): Updated options
-- `pinned` (boolean, optional): Pin status
+#### `comments.create`
+Add a comment or reply to a document.
 
-**Returns:** Updated attribute object.
-
-#### `dataAttributes.delete`
-Remove a custom data attribute.
-
-**Parameters:**
-- `id` (string, required): Attribute ID
-
-**Returns:** Success confirmation.
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `documentId` | string | Yes | Target document UUID. |
+| `text` | string | Yes | Markdown content. |
 
 ## Best Practices
+
+### 🔍 Discovery Workflow (Start Here)
+If you are interacting with a workspace for the first time or the structure is unknown:
+1.  **List Collections**: Call `collections.list` to see available areas.
+2.  **Inspect Attributes**: Call `dataAttributes.list` to understand the metadata schema.
+3.  **Search for Index**: Search for "README" or "Index" to find orientation guides.
 
 ### Search First
 Always call `documents.search` before creating new documents to avoid duplicates. Check existing collections for similar content.
