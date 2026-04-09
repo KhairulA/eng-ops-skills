@@ -1,7 +1,7 @@
 {
   "name": "eng-ops-skills",
   "version": "1.0.0",
-  "description": "Enterprise-grade AI agent skills for Engineering Operations.",
+  "description": "Enterprise-grade AI agent skills for Engineering Operations (EngOps), optimized for Paperclip AI.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,10 +11,14 @@
     "ai",
     "agent",
     "engops",
+    "paperclip",
+    "paperclip-ai",
     "outline",
     "jira",
     "github",
-    "skills"
+    "skills",
+    "enterprise-ai",
+    "automation-engine"
   ],
   "author": "KhairulA",
   "license": "MIT",

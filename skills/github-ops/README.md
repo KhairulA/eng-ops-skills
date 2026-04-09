@@ -1,6 +1,6 @@
 # GitHub EngOps Skill
 
-High-fidelity GitHub integration for AI agents. Focused on **Governance, Hygiene, and Cross-Tool Alignment**.
+High-fidelity GitHub integration for **Paperclip AI** agents. Focused on **Governance, Hygiene, and Cross-Tool Alignment**.
 
 ## Capabilities
 

@@ -1,6 +1,9 @@
-# EngOps Agent Skills
+# EngOps Agent Skills for Paperclip AI
 
-A curated suite of enterprise-grade AI agent skills focused on **Engineering Operations (EngOps)**. This library provides the "Horizontal" security and compliance layers and "Vertical" tool integrations necessary for agents to operate safely and effectively within professional engineering organizations.
+[![Paperclip](https://img.shields.io/badge/Platform-Paperclip%20AI-blueviolet)](https://paperclip.ai)
+[![EngOps](https://img.shields.io/badge/Domain-Engineering%20Operations-blue)](https://github.com/KhairulA/eng-ops-skills)
+
+A curated suite of enterprise-grade AI agent skills optimized for **Paperclip AI**. Build your next-gen **Engineering Operations (EngOps)** company with high-trust vertical integrations. This library provides the security, compliance, and tool-logic layers necessary for AI agents to operate safely within professional engineering organizations.
 
 ## The EngOps Matrix
 
@@ -47,6 +50,15 @@ General-purpose agent skills often lack the context and security required for en
 3.  **Cross-Tool Logic**: Designed to work together (e.g., an agent checking Jira status before updating a Wiki page).
 4.  **Governance First**: Human-in-the-loop (HITL) patterns for destructive or high-impact actions.
 
+## Built for the Paperclip AI Ecosystem
+
+If you are building an AI company or scaling internal productivity with **Paperclip AI**, this repository is your foundational skill-set.
+
+- **Native Discovery**: All skills include `SKILL.md` files, perfectly formatted for Paperclip's automatic tool discovery.
+- **Enterprise-Ready**: Skip the "management tax" of building your own Jira/GitHub integrations.
+- **Compliance-First**: Inherit enterprise-grade PII masking and audit logging from day one.
+- **Scalable**: Start with a single skill and expand into the full "EngOps Triad" as your company grows.
+
 ## Getting Started
 
 ### Installation
@@ -84,7 +96,6 @@ We are actively expanding the EngOps Matrix into new domains:
 - [ ] **Incident Vertical**: PagerDuty & Opsgenie skills for SRE "Incident Shadowing" and post-mortem drafting.
 - [ ] **FinOps Vertical**: AWS/GCP Cost Explorer integration for cloud spend auditing.
 - [ ] **Advanced Policy Engine**: Executable Policy-as-Code for real-time agent validation.
-
 
 
 

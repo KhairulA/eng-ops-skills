@@ -1,6 +1,6 @@
 # Jira EngOps Skill
 
-An Enterprise-focused Jira integration designed for AI agents to handle "Hygiene and Alignment" rather than just simple ticket creation.
+An Enterprise-focused Jira integration designed for **Paperclip AI** agents to handle "Hygiene and Alignment" rather than just simple ticket creation.
 
 ## Capabilities
 
