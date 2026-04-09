@@ -1,39 +1,35 @@
 {
   "manifest_version": "1",
-  "name": "Outline Wiki Skill",
-  "description": "Integrate Outline Wiki with Claude agents. Search, create, and manage documents in your knowledge base.",
+  "name": "EngOps Agent Skills",
+  "description": "A curated suite of enterprise-grade AI agent skills for Engineering Operations. Includes Outline, Jira, and GitHub integrations.",
   "version": "1.0.0",
   "author": "KhairulA",
-  "repository": "https://github.com/KhairulA/outline-wiki-skill",
+  "repository": "https://github.com/KhairulA/eng-ops-skills",
   "license": "MIT",
   "skills": [
     {
       "id": "outline-wiki",
       "name": "Outline Wiki",
-      "description": "Search, create, and manage documents in Outline Wiki. Works with Claude Code, claude.ai, Claude API, Paperclip AI, Cursor, and Windsurf.",
+      "description": "Knowledge management and documentation hygiene in Outline.",
       "path": "skills/outline-wiki",
-      "platforms": [
-        "claude-code",
-        "cursor",
-        "windsurf",
-        "codex",
-        "paperclip"
-      ],
-      "categories": [
-        "knowledge-management",
-        "documentation",
-        "wiki",
-        "collaboration"
-      ],
-      "tags": [
-        "outline",
-        "wiki",
-        "knowledge-base",
-        "documentation",
-        "api",
-        "search",
-        "content-management"
-      ]
+      "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
+      "categories": ["knowledge-management", "documentation"]
+    },
+    {
+      "id": "jira-ops",
+      "name": "Jira EngOps",
+      "description": "Task hygiene, status auditing, and project alignment in Jira.",
+      "path": "skills/jira-ops",
+      "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
+      "categories": ["project-management", "operations"]
+    },
+    {
+      "id": "github-ops",
+      "name": "GitHub EngOps",
+      "description": "PR auditing, repo hygiene, and code governance in GitHub.",
+      "path": "skills/github-ops",
+      "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
+      "categories": ["source-control", "governance"]
     }
   ]
 }

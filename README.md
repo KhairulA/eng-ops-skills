@@ -16,10 +16,18 @@ Our skills are organized into three primary verticals supported by a high-trust 
 | Skill | Category | Status | Description |
 | :--- | :--- | :--- | :--- |
 | [**Outline Wiki**](./skills/outline-wiki) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
-| **Jira Alignment** | ExecutionOps | 🏗️ Planned | Syncing tasks with documentation and PRs. |
-| **Access Auditor** | GovernanceOps | 🏗️ Planned | Auditing tool permissions for least-privilege agents. |
+| [**Jira EngOps**](./skills/jira-ops) | ExecutionOps | 🧪 Beta | Task hygiene, status auditing, and project alignment. |
+| [**GitHub EngOps**](./skills/github-ops) | QualityOps | 🧪 Beta | PR auditing, repo hygiene, and code governance. |
+
+## Documentation
+
+- **[Architecture](./ARCHITECTURE.md)**: The "EngOps Matrix" model (Verticals vs. Horizontals).
+- **[Playbooks](./playbooks)**: Multi-skill workflows like the "EngOps Triad."
+- **[Paperclip Setup](./AGENTS.md)**: Best practices for Paperclip AI.
+- **[Claude Code Setup](./CLAUDE.md)**: Patterns for the Claude Code terminal.
 
 ## Why "EngOps" Skills?
+
 
 General-purpose agent skills often lack the context and security required for enterprise environments. EngOps skills are built differently:
 
@@ -58,9 +66,11 @@ The `core/` directory contains shared modules used across all skills to ensure c
 ## Roadmap
 
 - [x] **Q1 2026**: Knowledge Vertical (Outline)
-- [ ] **Q2 2026**: Execution Vertical (Jira/Linear) & Alignment Bridge
-- [ ] **Q3 2026**: Quality & Security Vertical (GitHub PR Audit)
+- [x] **Q2 2026**: Execution Vertical (Jira) & Alignment Bridge
+- [x] **Q2 2026**: Quality & Security Vertical (GitHub PR Audit)
+- [ ] **Q3 2026**: Full EngOps Triad Automation
 - [ ] **Q4 2026**: Horizontal Governance Layer (Policy-as-Code)
+
 
 ## Contributing
 
