@@ -30,6 +30,15 @@
       "path": "skills/github-ops",
       "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
       "categories": ["source-control", "governance"]
+    },
+    {
+      "id": "gitlab-ops",
+      "name": "GitLab EngOps",
+      "description": "MR auditing, project hygiene, and CI/CD monitoring in GitLab.",
+      "path": "skills/gitlab-ops",
+      "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
+      "categories": ["source-control", "operations"]
     }
+
   ]
 }

@@ -4,10 +4,11 @@ This playbook describes the "Closed Loop" workflow that ensures **Information**,
 
 ## The Triad Workflow
 
-### 1. The Code Signal (GitHub)
-The agent monitors for a **Merged PR**.
-- **Action**: `github-ops` detects a merge in repo `backend-api`.
-- **Extraction**: The agent parses the PR description/branch for a Jira key (e.g., `PROJ-99`).
+### 1. The Code Signal (GitHub or GitLab)
+The agent monitors for a **Merged PR or MR**.
+- **Action**: `github-ops` or `gitlab-ops` detects a merge in the primary repository.
+- **Extraction**: The agent parses the PR/MR description for a Jira key (e.g., `PROJ-99`).
+
 
 ### 2. The Task Update (Jira)
 The agent transitions the task based on the code change.
