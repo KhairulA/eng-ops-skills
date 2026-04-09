@@ -48,6 +48,14 @@ npx skills add KhairulA/eng-ops-skills/skills/github-ops
 ### The "Triad Audit" (GitHub + Jira)
 > "Check PR #88. Extract the Jira key from the description, then use jira-ops to check if that ticket is in 'In Progress'. If it is 'Done', ask the developer why the PR is still open."
 
+## EngOps Horizontal Integration
+
+This skill is built to the **EngOps Standard** and is fully compatible with our horizontal core:
+- **[PII Guard](../../core/security)**: Auto-redacts secrets and PII before processing.
+- **[Audit Logging](../../core/logging)**: All write-actions generate a standard JSON audit trail.
+- **[Governance](../../core/governance)**: Supports human-in-the-loop approval gates.
+
 ---
+
 
 For detailed API definitions, see **[SKILL.md](./SKILL.md)**.

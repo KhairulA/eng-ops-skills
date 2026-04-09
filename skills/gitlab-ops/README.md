@@ -47,6 +47,14 @@ npx skills add KhairulA/eng-ops-skills/skills/gitlab-ops
 ### The "Cross-Platform" Triad
 > "Check the status of GitLab MR #202. If it is merged, use jira-ops to close the linked ticket and update the 'API Reference' doc in Outline."
 
+## EngOps Horizontal Integration
+
+This skill is built to the **EngOps Standard** and is fully compatible with our horizontal core:
+- **[PII Guard](../../core/security)**: Auto-redacts secrets and PII before processing.
+- **[Audit Logging](../../core/logging)**: All write-actions generate a standard JSON audit trail.
+- **[Governance](../../core/governance)**: Supports human-in-the-loop approval gates.
+
 ---
+
 
 For detailed API definitions, see **[SKILL.md](./SKILL.md)**.

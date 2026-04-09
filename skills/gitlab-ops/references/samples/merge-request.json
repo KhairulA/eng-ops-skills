@@ -1,0 +1,13 @@
+{
+  "iid": 101,
+  "project_id": 5678,
+  "title": "feat: connect gitlab-ops to core security",
+  "description": "Fixes #issue-45. Standardizing CI pipeline filters.",
+  "state": "opened",
+  "author": {
+    "username": "gitlab-dev"
+  },
+  "upvotes": 2,
+  "merge_status": "can_be_merged",
+  "web_url": "https://gitlab.example.com/org/repo/-/merge_requests/101"
+}

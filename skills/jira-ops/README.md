@@ -48,6 +48,14 @@ npx skills add KhairulA/eng-ops-skills/skills/jira-ops
 ### The "Status Sync"
 > "Check the status of PROJ-456. If it's closed, find the corresponding document in Outline and update the 'Status' attribute to 'Published'."
 
+## EngOps Horizontal Integration
+
+This skill is built to the **EngOps Standard** and is fully compatible with our horizontal core:
+- **[PII Guard](../../core/security)**: Auto-redacts secrets and PII before processing.
+- **[Audit Logging](../../core/logging)**: All write-actions generate a standard JSON audit trail.
+- **[Governance](../../core/governance)**: Supports human-in-the-loop approval gates.
+
 ---
 
 For detailed API definitions, see **[SKILL.md](./SKILL.md)**.
+

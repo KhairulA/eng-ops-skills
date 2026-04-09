@@ -222,7 +222,15 @@ MIT — Use this however you want. See [LICENSE](./LICENSE).
 - 💬 [GitHub Issues](https://github.com/KhairulA/outline-ops-skill/issues)
 - 🤝 [Discussions](https://github.com/KhairulA/outline-ops-skill/discussions)
 
+## EngOps Horizontal Integration
+
+This skill is built to the **EngOps Standard** and is fully compatible with our horizontal core:
+- **[PII Guard](../../../../core/security)**: Auto-redacts secrets and PII before processing.
+- **[Audit Logging](../../../../core/logging)**: All write-actions generate a standard JSON audit trail.
+- **[Governance](../../../../core/governance)**: Supports human-in-the-loop approval gates.
+
 ---
+
 
 **Version:** 1.0  
 **Last Updated:** April 2026  
