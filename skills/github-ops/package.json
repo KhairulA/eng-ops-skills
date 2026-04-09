@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Enterprise-grade GitHub PR auditing and repository hygiene for AI agents.",
   "keywords": ["ai", "agent", "github", "governance"],
+  "author": "KhairulA",
   "license": "MIT"
 }

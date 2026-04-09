@@ -7,8 +7,9 @@
     "outline-ops",
     "jira-ops",
     "github-ops",
-    "pii-guard"
-
+    "pii-guard",
+    "hitl-governance",
+    "audit-logging"
   ],
   "env": {
     "OUTLINE_BASE_URL": "...",

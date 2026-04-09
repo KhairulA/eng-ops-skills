@@ -1,5 +1,10 @@
 ---
-description: When the user wants to manage documentation in Confluence. Use when Confluence, pages, spaces, or Atlassian documentation is mentioned.
+name: confluence-ops
+description: Enterprise documentation management in Confluence. Use when the user needs to search, create, or update pages in an Atlassian Confluence space.
+metadata:
+  author: KhairulA
+  version: 0.1.0
+license: MIT
 related: [jira-ops, outline-ops]
 ---
 

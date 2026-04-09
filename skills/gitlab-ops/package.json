@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Enterprise-grade GitLab Merge Request and Issues integration for AI agents.",
   "keywords": ["ai", "agent", "gitlab", "engops"],
+  "author": "KhairulA",
   "license": "MIT"
 }

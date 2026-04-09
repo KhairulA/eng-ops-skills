@@ -42,6 +42,20 @@
       "description": "High-trust PII masking and secret detection core rules.",
       "path": "core/security",
       "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "hitl-governance",
+      "name": "HITL Governance",
+      "description": "Human-in-the-loop approval gates for high-risk actions.",
+      "path": "core/governance",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
+    },
+    {
+      "id": "audit-logging",
+      "name": "Audit Logging",
+      "description": "Standardized JSON audit trails for agent accountability.",
+      "path": "core/logging",
+      "platforms": ["claude-code", "paperclip", "cursor", "windsurf"]
     }
   ]
 }
