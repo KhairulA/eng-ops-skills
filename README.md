@@ -12,22 +12,18 @@ Our skills are organized into three primary verticals supported by a high-trust 
 | | **KnowledgeOps** | **ExecutionOps** | **QualityOps** |
 | :--- | :--- | :--- | :--- |
 | **Pillar Tools** | Outline, Confluence | Jira, GitLab Issues | GitHub, GitLab MRs |
-
 | **Goal** | Single Source of Truth | Task & Velocity | Trust & Compliance |
 
 ## Current Skills
 
 | Skill | Category | Status | Description |
 | :--- | :--- | :--- | :--- |
-| [**Outline Ops**](./skills/outline-ops) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
-| [**Confluence Ops**](./skills/confluence-ops) | KnowledgeOps | 🏗️ Planned | Enterprise documentation management in Atlassian Confluence. |
-| [**Notion Ops**](#) | KnowledgeOps | 🏗️ Planned | Documentation and project management in Notion. |
-
+| [**Outline Ops**](./skills/outline-ops) | KnowledgeOps | ✅ Production | Deep integration with Outline docs and data attributes. |
+| [**Confluence Ops**](./skills/confluence-ops) | KnowledgeOps | 🏗️ Planned | Enterprise documentation management in Confluence. |
+| [**Notion Ops**](#) | KnowledgeOps | 🏗️  Planned | Documentation and project management in Notion. |
 | [**Jira EngOps**](./skills/jira-ops) | ExecutionOps | 🧪 Beta | Task hygiene, status auditing, and project alignment. |
 | [**GitHub EngOps**](./skills/github-ops) | QualityOps | 🧪 Beta | PR auditing, repo hygiene, and code governance. |
 | [**GitLab EngOps**](./skills/gitlab-ops) | QualityOps | 🧪 Beta | MR auditing, issues management, and CI/CD monitoring. |
-
-
 
 
 ## Documentation
