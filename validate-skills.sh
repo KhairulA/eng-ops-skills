@@ -1,66 +1,66 @@
 #!/bin/bash
 
-# Validate Outline Wiki Skill format and structure
+# Validate EngOps Agent Skills structure
+# Loops through each vertical in skills/ and checks for compliance
 
 set -e
 
-SKILL_DIR="skills/outline-wiki"
 ERRORS=0
+SUCCESSES=0
 
-echo "🔍 Validating Outline Wiki Skill..."
+echo "🔍 Validating EngOps Skills Suite..."
 echo ""
 
-# Check main SKILL.md exists
-if [ ! -f "$SKILL_DIR/SKILL.md" ]; then
-  echo "❌ Missing: $SKILL_DIR/SKILL.md"
-  ERRORS=$((ERRORS + 1))
-else
-  echo "✅ Found: $SKILL_DIR/SKILL.md"
-  
-  # Check file size (should be under 500 lines for main skill)
-  LINES=$(wc -l < "$SKILL_DIR/SKILL.md")
-  if [ "$LINES" -gt 500 ]; then
-    echo "⚠️  Warning: SKILL.md has $LINES lines (recommended <500)"
+# Global checks
+FILES_TO_CHECK=("README.md" "LICENSE" "AGENTS.md" "CONTRIBUTING.md")
+
+for file in "${FILES_TO_CHECK[@]}"; do
+  if [ ! -f "$file" ]; then
+    echo "❌ Missing Global File: $file"
+    ERRORS=$((ERRORS + 1))
   else
-    echo "✅ SKILL.md size OK ($LINES lines)"
+    echo "✅ Found Global File: $file"
   fi
-fi
+done
 
-# Check for frontmatter
-if grep -q "^---$" "$SKILL_DIR/SKILL.md"; then
-  echo "✅ SKILL.md has frontmatter"
-else
-  echo "⚠️  Warning: SKILL.md missing YAML frontmatter"
-fi
+echo ""
 
-# Check README exists
-if [ ! -f "README.md" ]; then
-  echo "❌ Missing: README.md"
-  ERRORS=$((ERRORS + 1))
-else
-  echo "✅ Found: README.md"
-fi
+# Vertical Skill Checks
+for skill_path in skills/*/; do
+  [ -e "$skill_path" ] || continue
+  skill_name=$(basename "$skill_path")
+  
+  echo "--- Testing Vertical: $skill_name ---"
+  
+  # Check main SKILL.md exists
+  if [ ! -f "$skill_path/SKILL.md" ]; then
+    echo "❌ $skill_name: Missing SKILL.md"
+    ERRORS=$((ERRORS + 1))
+  else
+    echo "✅ $skill_name: Found SKILL.md"
+    
+    # Check for frontmatter
+    if ! grep -q "^---$" "$skill_path/SKILL.md"; then
+      echo "⚠️  $skill_name: SKILL.md missing YAML frontmatter"
+    fi
+  fi
 
-# Check LICENSE exists
-if [ ! -f "LICENSE" ]; then
-  echo "❌ Missing: LICENSE"
-  ERRORS=$((ERRORS + 1))
-else
-  echo "✅ Found: LICENSE"
-fi
-
-# Check manifest exists
-if [ ! -f ".claude-plugin/manifest.json" ]; then
-  echo "⚠️  Missing: .claude-plugin/manifest.json (optional but recommended)"
-else
-  echo "✅ Found: .claude-plugin/manifest.json"
-fi
+  # Check Skill README exists
+  if [ ! -f "$skill_path/README.md" ]; then
+    echo "❌ $skill_name: Missing README.md"
+    ERRORS=$((ERRORS + 1))
+  else
+    echo "✅ $skill_name: Found README.md"
+  fi
+  
+  SUCCESSES=$((SUCCESSES + 1))
+done
 
 echo ""
 if [ $ERRORS -eq 0 ]; then
-  echo "✅ All checks passed!"
+  echo "✅ Validated $SUCCESSES skill(s) with no critical errors!"
   exit 0
 else
-  echo "❌ Found $ERRORS error(s)"
+  echo "❌ Found $ERRORS error(s) across $SUCCESSES skill(s)"
   exit 1
 fi

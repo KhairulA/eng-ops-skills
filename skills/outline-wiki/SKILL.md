@@ -300,35 +300,27 @@ See detailed documentation:
 
 ## Installation
 
-### Option 1: CLI Install (Recommended)
+### Option 1: CLI Install (Single Skill Only)
 
 ```bash
-# Install this skill
-npx skills add KhairulA/outline-wiki-skill
-
-# Or with specific skill
-npx skills add KhairulA/outline-wiki-skill --skill outline-wiki
+# Install this specific skill
+npx skills add KhairulA/eng-ops-skills/skills/outline-wiki
 ```
 
-### Option 2: Manual Clone
+### Option 2: Full Suite (Recommended)
 
 ```bash
-git clone https://github.com/KhairulA/outline-wiki-skill.git
-cp -r outline-wiki-skill/skills/* .agents/skills/
+# Install the full EngOps suite
+npx skills add KhairulA/eng-ops-skills
 ```
 
-### Option 3: Git Submodule
+### Option 3: Manual Clone / Submodule
 
 ```bash
-git submodule add https://github.com/KhairulA/outline-wiki-skill.git .agents/outline-wiki
+git clone https://github.com/KhairulA/eng-ops-skills.git
+cp -r eng-ops-skills/skills/outline-wiki .agents/skills/
 ```
 
-### Option 4: Claude Code Plugin
-
-```
-/plugin marketplace add KhairulA/outline-wiki-skill
-/plugin install outline-wiki
-```
 
 ---
 
