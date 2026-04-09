@@ -70,8 +70,9 @@ The `core/` directory contains shared modules used across all skills to ensure c
 - [x] **Q2 2026**: Execution Vertical (Jira) & Alignment Bridge
 - [x] **Q2 2026**: Quality & Security Vertical (GitHub PR Audit)
 - [x] **Q2 2026**: Horizontal Governance Layer (HITL Patterns)
-- [ ] **Q3 2026**: Full EngOps Triad Automation (Closed-loop release)
-- [ ] **Q4 2026**: Policy-as-Code Integration
+- [x] **Q2 2026**: Full EngOps Triad Automation (v1.0 Release)
+- [x] **Q2 2026**: Policy-as-Code Integration
+
 
 ## Contributing
 
