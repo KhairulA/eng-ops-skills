@@ -2,79 +2,92 @@
 
 EngOps agents are specialized Paperclip agents designed to reduce the "Management Tax" on engineering teams. They handle documentation, ticket hygiene, and compliance auditing.
 
-## The EngOps Agent Persona
+## 1. Installation in Paperclip
 
-When configuring your Paperclip agent, define its role around "Operational Excellence":
+Paperclip discovers skills by scanning the `.agents/` directory for folders containing a `SKILL.md`. To use the **EngOps Suite**, you must ensure the individual verticals are visible to the Paperclip scanner.
+
+### Method A: The Suite Submodule (Recommended)
+This method keeps you in sync with the entire EngOps project.
+
+```bash
+# 1. Add the suite to your paperclip project
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
+
+# 2. Expose specific skills to the Paperclip scanner via symlinks
+ln -s eng-ops/skills/outline-wiki .agents/outline-wiki
+ln -s eng-ops/skills/jira-ops .agents/jira-ops
+ln -s eng-ops/skills/github-ops .agents/github-ops
+ln -s eng-ops/core/security .agents/pii-guard
+```
+
+### Method B: Single Skill Install
+If you only want one vertical:
+
+```bash
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/outline-wiki
+# Then update the Paperclip skill config to point to: .agents/outline-wiki/skills/outline-wiki
+```
+
+---
+
+## 2. Configuration (`.env`)
+
+Paperclip loads these variables automatically for your agents. Add your enterprise tokens here:
+
+```bash
+# Knowledge (Outline)
+OUTLINE_BASE_URL=https://wiki.your-org.com
+OUTLINE_API_TOKEN=your_token
+
+# Execution (Jira)
+JIRA_INSTANCE_URL=https://your-org.atlassian.net
+JIRA_USER_EMAIL=bot@your-org.com
+JIRA_API_TOKEN=your_token
+
+# Quality (GitHub)
+GITHUB_TOKEN=your_token
+GITHUB_OWNER=your-org
+```
+
+---
+
+## 3. Sample Agent: `EngOps-Architect.json`
+
+Create this file in your Paperclip `agents/` directory. It uses all three pillars of the suite.
 
 ```json
 {
   "name": "EngOps Architect",
   "role": "Operational Alignment",
-  "description": "Ensures that our knowledge base, tasks, and code remain in sync and compliant.",
+  "description": "Aligns Jira tickets, GitHub PRs, and Outline documentation.",
   "skills": [
     "outline-wiki",
     "jira-ops",
+    "github-ops",
     "pii-guard"
-  ]
+  ],
+  "instructions": "You are a governance-first architect. Always apply the 'pii-guard' safety check before updating any public wiki document. When a PR is merged, update the corresponding Jira ticket and Outline doc."
 }
 ```
-
-## Cross-Skill Workflows
-
-The power of this repo lies in combining skills to solve high-friction problems.
-
-### Workflow: The Sync Audit
-**Goal:** Ensure technical documentation reflects current project reality.
-
-1.  **Step 1:** Use `jira-ops` to list all tasks completed this week.
-2.  **Step 2:** Use `outline-wiki` to find the "Release Notes" or "Project Update" document.
-3.  **Step 3:** Agent compares the two and appends missing features to the document.
-
-### Workflow: The Security Gate
-**Goal:** Prevent sensitive information from entering public documentation.
-
-1.  **Step 1:** Agent drafts a document from a Slack conversation.
-2.  **Step 2:** Agent runs the text through the `pii-guard` horizontal skill.
-3.  **Step 3:** If clean, agent calls `outline-wiki.documents.create`.
-
-## Enterprise Controls
-
-### Standardized Audit Trails
-All EngOps skills are designed to produce an audit log. Configure your agent to write these logs to a persistent location:
-
-```bash
-# Example agent instruction
-"Whenever you perform a write action, record the metadata (timestamp, user, document_id) in the /audits/eng-ops.log file."
-```
-
-### Shared Multi-Skill Setup
-To use multiple skills in one Paperclip project:
-
-```bash
-git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
-```
-
-In your task definitions, you can now reference skills from different verticals:
-
-```javascript
-// Complex Task
-{
-  "task": "Align our Roadmap with Jira",
-  "steps": [
-    "search linear for 'Q3 Roadmap'",
-    "search outline for 'Strategy 2026'",
-    "propose edits to outline doc"
-  ]
-}
-```
-
-## Best Practices
-1.  **Least Privilege**: Give agents specific API tokens for specific collections.
-2.  **Human-in-the-Loop**: Use Paperclip's `requestApproval` feature for any `delete` or `update` actions on core documentation.
-3.  **Governance First**: Always include the `pii-guard` skill if the agent processes external data (e.g., meeting transcripts).
 
 ---
 
-For specific skill documentation, see:
-- [Outline Wiki Skill](./skills/outline-wiki)
-- [Governance Patterns](./core/security)
+## 4. Multi-Skill Workflow Pattern
+
+In your Paperclip task definitions, you can now orchestrate these skills:
+
+```javascript
+{
+  "task": "Perform Friday Audit",
+  "steps": [
+    "search jira-ops for 'Done' tickets from the last 7 days",
+    "search github-ops for merged PRs matching those Jira keys",
+    "search outline-wiki for corresponding technical specs",
+    "if gap found: update outline-wiki doc and post summary to Slack"
+  ]
+}
+```
+
+---
+
+*For detailed vertical documentation, see the [skills/](./skills) directory.*

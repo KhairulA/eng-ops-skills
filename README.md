@@ -23,8 +23,10 @@ Our skills are organized into three primary verticals supported by a high-trust 
 
 - **[Architecture](./ARCHITECTURE.md)**: The "EngOps Matrix" model (Verticals vs. Horizontals).
 - **[Playbooks](./playbooks)**: Multi-skill workflows like the "EngOps Triad."
-- **[Paperclip Setup](./AGENTS.md)**: Best practices for Paperclip AI.
+- **[Paperclip Setup](./AGENTS.md)**: Best practices and symlinking for Paperclip AI.
+- **[Paperclip Agent Template](./templates/paperclip-agent.json)**: A copy-pasteable JSON configuration.
 - **[Claude Code Setup](./CLAUDE.md)**: Patterns for the Claude Code terminal.
+
 - **[Security Policy](./SECURITY.md)**: Vulnerability reporting and safety commitments.
 - **[Code of Conduct](./CODE_OF_CONDUCT.md)**: Community participation standards.
 
