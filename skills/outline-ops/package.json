@@ -1,0 +1,7 @@
+{
+  "name": "@eng-ops/outline-ops",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Outline Ops integration for AI agents.",
+  "keywords": ["ai", "agent", "outline", "wiki"],
+  "license": "MIT"
+}

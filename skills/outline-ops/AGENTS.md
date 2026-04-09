@@ -1,10 +1,10 @@
 # Paperclip AI Integration
 
-This document covers Paperclip AI-specific patterns and best practices for using the Outline Wiki Skill with Paperclip agents.
+This document covers Paperclip AI-specific patterns and best practices for using the Outline Ops Skill with Paperclip agents.
 
 ## Overview
 
-Outline Wiki Skill integrates seamlessly with Paperclip AI agents as a core knowledge management tool. Agents can:
+Outline Ops Skill integrates seamlessly with Paperclip AI agents as a core knowledge management tool. Agents can:
 - Search company wikis and knowledge bases
 - Create and update documentation automatically
 - Organize information with custom attributes
@@ -18,7 +18,7 @@ Outline Wiki Skill integrates seamlessly with Paperclip AI agents as a core know
 In your Paperclip `.agents/` directory:
 
 ```bash
-git submodule add https://github.com/KhairulA/outline-wiki-skill.git .agents/outline-wiki-skill
+git submodule add https://github.com/KhairulA/outline-ops-skill.git .agents/outline-ops-skill
 ```
 
 ### 2. Configure Environment Variables
@@ -41,7 +41,7 @@ In your agent's configuration (e.g., `agents/researcher.json`):
   "description": "Searches wiki, creates research summaries, organizes findings",
   "model": "claude-opus-4-6",
   "skills": [
-    "outline-wiki",
+    "outline-ops",
     "web-search",
     "analytics"
   ],
@@ -215,7 +215,7 @@ Link Outline documents to Paperclip goals:
   "title": "Update project documentation",
   "goal": "Keep knowledge base current and accurate",
   "task": {
-    "type": "outline-wiki",
+    "type": "outline-ops",
     "action": "update-docs",
     "searchQuery": "project-name",
     "attributes": {
@@ -260,7 +260,7 @@ Outline operations work well with Paperclip heartbeats:
     "tasks": [
       {
         "title": "Review and organize wiki",
-        "skill": "outline-wiki",
+        "skill": "outline-ops",
         "actions": [
           "list_collections",
           "search_uncategorized",
@@ -406,4 +406,4 @@ If wiki operations consume too many tokens:
 
 ---
 
-For general skill usage, see [SKILL.md](./skills/outline-wiki/SKILL.md). For Claude Code patterns, see [CLAUDE.md](./CLAUDE.md).
+For general skill usage, see [SKILL.md](./skills/outline-ops/SKILL.md). For Claude Code patterns, see [CLAUDE.md](./CLAUDE.md).

@@ -3,16 +3,16 @@ description: When the user wants to search, create, manage, or migrate documents
 related: [custom-context, search-optimization, content-migration]
 ---
 
-# Outline Wiki Skill
+# Outline Ops Skill
 
-Integrates Outline Wiki with Claude (via Claude Code, claude.ai, or Claude API) and Paperclip AI agents. Enables reading, searching, creating, and managing documents using the Outline REST API.
+Integrates Outline Ops with Claude (via Claude Code, claude.ai, or Claude API) and Paperclip AI agents. Enables reading, searching, creating, and managing documents using the Outline REST API.
 
 **Works with:** Claude Code, Claude API, claude.ai, Paperclip AI, Cursor, Windsurf, and any agent supporting the Agent Skills spec.
 
 ## Setup
 
 ### Prerequisites
-- Outline Wiki instance (cloud or self-hosted)
+- Outline Ops instance (cloud or self-hosted)
 - Outline API token with appropriate permissions
 - For Paperclip AI: Paperclip instance running the integration
 - For Claude users: Access to Claude Code, claude.ai, or Claude API
@@ -304,7 +304,7 @@ See detailed documentation:
 
 ```bash
 # Install this specific skill
-npx skills add KhairulA/eng-ops-skills/skills/outline-wiki
+npx skills add KhairulA/eng-ops-skills/skills/outline-ops
 ```
 
 ### Option 2: Full Suite (Recommended)
@@ -318,7 +318,7 @@ npx skills add KhairulA/eng-ops-skills
 
 ```bash
 git clone https://github.com/KhairulA/eng-ops-skills.git
-cp -r eng-ops-skills/skills/outline-wiki .agents/skills/
+cp -r eng-ops-skills/skills/outline-ops .agents/skills/
 ```
 
 

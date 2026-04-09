@@ -1,4 +1,4 @@
-# Outline Wiki Workspace Setup
+# Outline Ops Workspace Setup
 
 Best practices and templates for organizing a new Outline workspace for maximum AI compatibility.
 

@@ -1,6 +1,6 @@
 ---
 description: When the user wants to audit PRs, manage GitHub issues, check repository hygiene, or sync code activity with Jira and Outline. Use when GitHub, pull requests, repos, or PR reviews are mentioned.
-related: [jira-ops, outline-wiki]
+related: [jira-ops, outline-ops]
 ---
 
 # GitHub EngOps Skill
@@ -66,11 +66,11 @@ Agents should look for "Reviewer Fatigue."
 ```
 
 ### 3. Automated Release Notes
-When a PR is merged, use this skill to extract the PR summary and feed it to the `outline-wiki` skill to draft release notes.
+When a PR is merged, use this skill to extract the PR summary and feed it to the `outline-ops` skill to draft release notes.
 
 ## Related Skills
 - **[jira-ops](../jira-ops/SKILL.md)**: Link PRs to development tasks.
-- **[outline-wiki](../outline-wiki/SKILL.md)**: Generate documentation from merged code.
+- **[outline-ops](../outline-ops/SKILL.md)**: Generate documentation from merged code.
 
 ---
 

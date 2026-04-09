@@ -12,7 +12,7 @@ Claude Code excels at orchestrating multiple tools via the shell. You can use th
 
 - **Jira Status**: !`jira-ops issues search "project = CORE AND status = 'In Progress'"`
 - **Recent PRs**: !`github-ops prs list-pending --repo backend-api`
-- **Wiki Index**: !`outline-wiki collections list --limit 5`
+- **Wiki Index**: !`outline-ops collections list --limit 5`
 ```
 
 ## Interactive EngOps Workflows
@@ -31,7 +31,7 @@ const jiraDone = JSON.parse(execSync('npx skills run jira-ops issues.search "sta
 
 // 2. Cross-reference with Outline
 jiraDone.issues.forEach(issue => {
-  const wikiMatch = execSync(`npx skills run outline-wiki documents.search "${issue.key}"`);
+  const wikiMatch = execSync(`npx skills run outline-ops documents.search "${issue.key}"`);
   if (!wikiMatch.includes(issue.key)) {
     console.log(`⚠️ ALIGNMENT GAP: ${issue.key} is Done in Jira but missing from Outline.`);
   }

@@ -1,4 +1,4 @@
-# Outline Wiki Integration Examples
+# Outline Ops Integration Examples
 
 Patterns for integrating Outline with common developer tools and workflows.
 

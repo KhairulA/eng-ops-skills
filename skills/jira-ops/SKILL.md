@@ -1,6 +1,6 @@
 ---
 description: When the user wants to manage Jira issues, search for task status, audit stale tickets, or sync engineering tasks with external documentation. Use when Jira, tickets, issues, sprints, or task status are mentioned.
-related: [outline-wiki, sync-auditor]
+related: [outline-ops, sync-auditor]
 ---
 
 # Jira EngOps Skill
@@ -88,7 +88,7 @@ Whenever an agent updates a Jira ticket based on information found in a Wiki (Ou
 Encourage the agent to use simple JQL. Highly complex queries should be double-checked or generated iteratively.
 
 ## Related Skills
-- **[outline-wiki](../outline-wiki/SKILL.md)**: Use together to sync task status with documentation.
+- **[outline-ops](../outline-ops/SKILL.md)**: Use together to sync task status with documentation.
 - **[pii-filter](../../core/security/README.md)**: Filter ticket descriptions before processing if they contain sensitive system logs.
 
 ---

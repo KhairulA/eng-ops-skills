@@ -8,10 +8,11 @@
   "license": "MIT",
   "skills": [
     {
-      "id": "outline-wiki",
-      "name": "Outline Wiki",
+      "id": "outline-ops",
+      "name": "Outline Ops",
       "description": "Knowledge management and documentation hygiene in Outline.",
-      "path": "skills/outline-wiki",
+      "path": "skills/outline-ops",
+
       "platforms": ["claude-code", "cursor", "windsurf", "paperclip"],
       "categories": ["knowledge-management", "documentation"]
     },

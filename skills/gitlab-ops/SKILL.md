@@ -1,6 +1,6 @@
 ---
 description: When the user wants to audit GitLab Merge Requests (MRs), manage issues, check project hygiene, or sync code activity with Jira and Outline. Use when GitLab, MRs, projects, or GitLab reviews are mentioned.
-related: [jira-ops, outline-wiki]
+related: [jira-ops, outline-ops]
 ---
 
 # GitLab EngOps Skill
@@ -54,11 +54,11 @@ Like GitHub, agents should search for Jira keys in MR titles or descriptions.
 GitLab is heavily integrated with its own CI. This skill can be used to query pipeline status: `GET /projects/:id/merge_requests/:mr_id/pipelines`.
 
 ### 3. Automated Documentation
-When an MR is merged, extract the "Changelog" label or MR description to update your Outline Wiki.
+When an MR is merged, extract the "Changelog" label or MR description to update your Outline Ops.
 
 ## Related Skills
 - **[jira-ops](../jira-ops/SKILL.md)**: Link Merge Requests to Jira issues.
-- **[outline-wiki](../outline-wiki/SKILL.md)**: Sync MR summaries to technical docs.
+- **[outline-ops](../outline-ops/SKILL.md)**: Sync MR summaries to technical docs.
 
 ---
 

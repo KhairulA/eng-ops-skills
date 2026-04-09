@@ -1,4 +1,4 @@
-# Outline Wiki API Methods
+# Outline Ops API Methods
 
 Complete reference for the RPC-style Outline API used by this skill. All methods are `POST` requests to `https://app.getoutline.com/api/:method`.
 

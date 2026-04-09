@@ -14,8 +14,9 @@ This method keeps you in sync with the entire EngOps project.
 git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/eng-ops
 
 # 2. Expose specific skills to the Paperclip scanner via symlinks
-ln -s eng-ops/skills/outline-wiki .agents/outline-wiki
+ln -s eng-ops/skills/outline-ops .agents/outline-ops
 ln -s eng-ops/skills/jira-ops .agents/jira-ops
+
 ln -s eng-ops/skills/github-ops .agents/github-ops
 ln -s eng-ops/core/security .agents/pii-guard
 ```
@@ -24,8 +25,8 @@ ln -s eng-ops/core/security .agents/pii-guard
 If you only want one vertical:
 
 ```bash
-git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/outline-wiki
-# Then update the Paperclip skill config to point to: .agents/outline-wiki/skills/outline-wiki
+git submodule add https://github.com/KhairulA/eng-ops-skills.git .agents/outline-ops
+# Then update the Paperclip skill config to point to: .agents/outline-ops/skills/outline-ops
 ```
 
 ---
@@ -61,7 +62,7 @@ Create this file in your Paperclip `agents/` directory. It uses all three pillar
   "role": "Operational Alignment",
   "description": "Aligns Jira tickets, GitHub PRs, and Outline documentation.",
   "skills": [
-    "outline-wiki",
+    "outline-ops",
     "jira-ops",
     "github-ops",
     "pii-guard"
@@ -82,8 +83,8 @@ In your Paperclip task definitions, you can now orchestrate these skills:
   "steps": [
     "search jira-ops for 'Done' tickets from the last 7 days",
     "search github-ops for merged PRs matching those Jira keys",
-    "search outline-wiki for corresponding technical specs",
-    "if gap found: update outline-wiki doc and post summary to Slack"
+    "search outline-ops for corresponding technical specs",
+    "if gap found: update outline-ops doc and post summary to Slack"
   ]
 }
 ```

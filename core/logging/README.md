@@ -9,7 +9,7 @@ Every change-action (create, update, delete) should produce a log entry in this 
 ```json
 {
   "timestamp": "ISO8601",
-  "skill": "vertical-name (e.g., outline-wiki)",
+  "skill": "vertical-name (e.g., outline-ops)",
   "action": "action-name (e.g., documents.create)",
   "agent_id": "optional-id",
   "resource_id": "uuid-or-key",

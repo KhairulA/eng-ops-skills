@@ -4,10 +4,11 @@
   "description": "Enterprise agent for aligning documentation, tasks, and code.",
   "model": "claude-3-5-sonnet-latest",
   "skills": [
-    "outline-wiki",
+    "outline-ops",
     "jira-ops",
     "github-ops",
     "pii-guard"
+
   ],
   "env": {
     "OUTLINE_BASE_URL": "...",
@@ -18,7 +19,7 @@
     "GITHUB_TOKEN": "...",
     "GITHUB_OWNER": "..."
   },
-  "instructions": "You ensure the Engineering Triad (Code, Tasks, Docs) is always in sync. Before any write action, run the pii-guard rules. After every merge in GitHub, mark the Jira task as Done and update the Outline Wiki.",
+  "instructions": "You ensure the Engineering Triad (Code, Tasks, Docs) is always in sync. Before any write action, run the pii-guard rules. After every merge in GitHub, mark the Jira task as Done and update the Outline Ops.",
   "governance": {
     "requireApproval": ["delete", "mass-update"]
   }

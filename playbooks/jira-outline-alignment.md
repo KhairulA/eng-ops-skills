@@ -16,7 +16,7 @@ The agent searches Jira for tickets completed in the last 7 days.
 ### Step 2: Identify Corresponding Documentation
 For each completed ticket, the agent searches Outline for mentions of the feature or ticket key.
 ```
-"Use outline-wiki to search for documents related to 'Feature X' or 'PROJ-123'."
+"Use outline-ops to search for documents related to 'Feature X' or 'PROJ-123'."
 ```
 
 ### Step 3: Propose or Apply Updates
@@ -34,7 +34,7 @@ The agent adds a comment to the Jira ticket linking to the updated documentation
 ## Configured Agent Prompt
 To run this automatically, give your Paperclip agent these instructions:
 
-> "You are an EngOps Architect. Every Friday, your task is to audit our JIRA project 'CORE' against our Outline Wiki collection 'Project Roadmaps'. 
+> "You are an EngOps Architect. Every Friday, your task is to audit our JIRA project 'CORE' against our Outline Ops collection 'Project Roadmaps'. 
 > 1. Find all 'Done' tickets from the week.
 > 2. Ensure their corresponding docs in Outline are updated.
 > 3. Use the `pii-filter` from our core skills if you extract log data from Jira comments.

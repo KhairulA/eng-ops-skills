@@ -11,11 +11,14 @@ This repository is organized as a **Monorepo of Skills** for AI agents, supporte
 │   ├── logging/           # Standardized JSON audit logging
 │   └── auth/              # Patterns for enterprise credentials
 ├── skills/                # [VERTICALS] Individual tool integrations
-│   ├── outline-wiki/      # KnowledgeOps Vertical
+│   ├── outline-ops/      # KnowledgeOps Vertical
 │   │   ├── SKILL.md       # Primary skill definition
 │   │   ├── README.md      # Skill-specific setup
 │   │   └── references/    # API and architectural docs
-│   ├── [next-skill]/      # Planned verticals (Jira, GitHub, etc.)
+│   ├── jira-ops/          # ExecutionOps Vertical
+│   ├── github-ops/        # QualityOps Vertical
+│   └── gitlab-ops/        # QualityOps Vertical
+
 ├── playbooks/             # [MULTI-SKILL] Cross-vertical workflows
 ├── AGENTS.md              # Overarching patterns for Paperclip/LLMs
 ├── CLAUDE.md              # Claude Code specific patterns

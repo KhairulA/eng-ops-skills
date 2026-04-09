@@ -1,4 +1,4 @@
-# Outline Wiki Custom Data Attributes
+# Outline Ops Custom Data Attributes
 
 Custom data attributes allow you to store structured metadata on documents. This is essential for Paperclip AI agents to track status, ownership, and other business-specific fields.
 

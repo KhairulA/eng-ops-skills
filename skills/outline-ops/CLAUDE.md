@@ -9,7 +9,7 @@ Claude Code supports embedding shell commands in SKILL.md using `!`command`` syn
 Use this to auto-inject your Outline context configuration:
 
 ```markdown
-# Outline Wiki Skill
+# Outline Ops Skill
 
 Outline context: !`cat .agents/outline-context.md 2>/dev/null || echo "No Outline context file found — ask the user about their Outline instance before proceeding."`
 ```
@@ -140,7 +140,7 @@ When using this skill in Claude Code, try these commands:
 /create-document "My Document" "Initial content here"
 
 # Show skill info
-/skill info outline-wiki
+/skill info outline-ops
 ```
 
 ## Interactive Workflows
@@ -305,4 +305,4 @@ console.log('Setup guide created: WORKSPACE_SETUP.md');
 
 ---
 
-For general skill usage, see [SKILL.md](./skills/outline-wiki/SKILL.md). For Paperclip-specific patterns, see [AGENTS.md](./AGENTS.md).
+For general skill usage, see [SKILL.md](./skills/outline-ops/SKILL.md). For Paperclip-specific patterns, see [AGENTS.md](./AGENTS.md).

@@ -1,6 +1,6 @@
-# Outline Wiki Skill
+# Outline Ops Skill
 
-Integrates Outline Wiki with Claude (via Claude Code, claude.ai, or Claude API) and Paperclip AI agents. Enables reading, searching, creating, and managing documents using the Outline REST API.
+Integrates Outline Ops with Claude (via Claude Code, claude.ai, or Claude API) and Paperclip AI agents. Enables reading, searching, creating, and managing documents using the Outline REST API.
 
 **Works with:** Claude Code, Claude API, claude.ai, Paperclip AI, Cursor, Windsurf, and any agent supporting the Agent Skills spec.
 
@@ -10,7 +10,7 @@ Integrates Outline Wiki with Claude (via Claude Code, claude.ai, or Claude API) 
 
 ```bash
 # Install only this specific skill from the EngOps suite
-npx skills add KhairulA/eng-ops-skills/skills/outline-wiki
+npx skills add KhairulA/eng-ops-skills/skills/outline-ops
 ```
 
 ### Option 2: Full Suite (Recommended for EngOps)
@@ -72,7 +72,7 @@ Once installed, just ask your agent to help with wiki tasks:
 You can also invoke the skill directly:
 
 ```
-/outline-wiki
+/outline-ops
 ```
 
 ## What This Skill Does
@@ -159,7 +159,7 @@ Content-Type: application/json
 - `dataAttributes.update(id, name, description, options, pinned)` — Update attribute
 - `dataAttributes.delete(id)` — Delete attribute
 
-For complete API documentation, see [skills/outline-wiki/references/api-methods.md](./skills/outline-wiki/references/api-methods.md).
+For complete API documentation, see [skills/outline-ops/references/api-methods.md](./skills/outline-ops/references/api-methods.md).
 
 ## Best Practices
 
@@ -172,11 +172,11 @@ For complete API documentation, see [skills/outline-wiki/references/api-methods.
 
 ## Documentation
 
-- **[SKILL.md](./skills/outline-wiki/SKILL.md)** — Main skill definition
-- **[API Methods](./skills/outline-wiki/references/api-methods.md)** — Complete API specification
-- **[Data Attributes](./skills/outline-wiki/references/data-attributes.md)** — Attribute type definitions
-- **[Workspace Setup](./skills/outline-wiki/references/workspace-setup.md)** — Setup templates and conventions
-- **[Integration Examples](./skills/outline-wiki/references/integration-examples.md)** — Examples with n8n, Paperclip, etc.
+- **[SKILL.md](./skills/outline-ops/SKILL.md)** — Main skill definition
+- **[API Methods](./skills/outline-ops/references/api-methods.md)** — Complete API specification
+- **[Data Attributes](./skills/outline-ops/references/data-attributes.md)** — Attribute type definitions
+- **[Workspace Setup](./skills/outline-ops/references/workspace-setup.md)** — Setup templates and conventions
+- **[Integration Examples](./skills/outline-ops/references/integration-examples.md)** — Examples with n8n, Paperclip, etc.
 - **[CLAUDE.md](./CLAUDE.md)** — Claude Code-specific patterns
 - **[AGENTS.md](./AGENTS.md)** — Paperclip AI-specific patterns
 
@@ -213,14 +213,14 @@ MIT — Use this however you want. See [LICENSE](./LICENSE).
 
 ## Related Projects
 
-- [Outline Wiki](https://github.com/outline/outline) — Open source wiki & knowledge base
+- [Outline Ops](https://github.com/outline/outline) — Open source wiki & knowledge base
 - [Agent Skills Spec](https://agentskills.io) — Standard for AI agent skills
 
 ## Support
 
 - 📖 [Official Outline Docs](https://docs.getoutline.com)
-- 💬 [GitHub Issues](https://github.com/KhairulA/outline-wiki-skill/issues)
-- 🤝 [Discussions](https://github.com/KhairulA/outline-wiki-skill/discussions)
+- 💬 [GitHub Issues](https://github.com/KhairulA/outline-ops-skill/issues)
+- 🤝 [Discussions](https://github.com/KhairulA/outline-ops-skill/discussions)
 
 ---
 

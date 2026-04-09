@@ -15,10 +15,11 @@ Our skills are organized into three primary verticals supported by a high-trust 
 
 | Skill | Category | Status | Description |
 | :--- | :--- | :--- | :--- |
-| [**Outline Wiki**](./skills/outline-wiki) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
+| [**Outline Ops**](./skills/outline-ops) | KnowledgeOps | ✅ Production | Deep integration with Outline for docs and data attributes. |
 | [**Jira EngOps**](./skills/jira-ops) | ExecutionOps | 🧪 Beta | Task hygiene, status auditing, and project alignment. |
 | [**GitHub EngOps**](./skills/github-ops) | QualityOps | 🧪 Beta | PR auditing, repo hygiene, and code governance. |
 | [**GitLab EngOps**](./skills/gitlab-ops) | QualityOps | 🧪 Beta | MR auditing, project hygiene, and CI/CD monitoring. |
+
 
 
 ## Documentation
@@ -49,7 +50,8 @@ Choose the individual skills you need for your agent:
 
 ```bash
 # Add a single skill
-npx skills add KhairulA/eng-ops-skills/skills/outline-wiki
+npx skills add KhairulA/eng-ops-skills/skills/outline-ops
+
 
 # Add the full suite
 npx skills add KhairulA/eng-ops-skills
@@ -57,7 +59,7 @@ npx skills add KhairulA/eng-ops-skills
 
 ### For Developers
 
-We provide **[Sample Payloads](./skills/outline-wiki/references/samples)** for each skill to enable rapid testing and mocking without live API tokens.
+We provide **[Sample Payloads](./skills/outline-ops/references/samples)** for each skill to enable rapid testing and mocking without live API tokens.
 
 ## Horizontal Core
 

@@ -20,7 +20,7 @@ for (const pr of prs) {
 ```
 
 ## 2. Release Note Generation
-Extracts merged PR titles since the last release and formats them for the Outline Wiki.
+Extracts merged PR titles since the last release and formats them for the Outline Ops.
 
 ```javascript
 const merges = await github.getMergedPRsSince('v1.2.0');

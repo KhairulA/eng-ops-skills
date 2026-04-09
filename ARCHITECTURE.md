@@ -7,7 +7,7 @@ This document explains how the Verticals and Horizontals of the EngOps Agent Ski
 ```mermaid
 graph TD
     subgraph "Verticals (The Tools)"
-        V1[Outline Wiki]
+        V1[Outline Ops]
         V2[Jira Ops]
         V3[GitHub Ops]
     end
